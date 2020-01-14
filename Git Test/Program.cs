@@ -10,12 +10,15 @@ namespace Git_Test
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Choose minimum bound for Guessing Game.");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Choose maximum bound for Guessing Game.");
+            int y = Convert.ToInt32(Console.ReadLine());
             bool wrong = true;
             int count = 0;
             Random random = new Random();
-            int rand = random.Next(0,100);
-            Console.WriteLine("I am thinking of a number between 0 and 100");
+            int rand = random.Next(x,y);
+            Console.WriteLine("I am thinking of a number between " + x + " and " + y + ".");
             while (wrong)
             {
                 int guess = Convert.ToInt32(Console.ReadLine());
